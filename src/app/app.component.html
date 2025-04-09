@@ -1,3 +1,8 @@
 <h1>{{ title }}</h1>
 <hr>
+<a [routerLink]="['']" routerLinkActive="router-link-active-class">Inicio</a><br>
+<a [routerLink]="['/bienvenida']" routerLinkActive="router-link-active-class">Bienvenida</a><br>
+<a [routerLink]="['/variables']" routerLinkActive="router-link-active-class">Variables</a><br>
+<a [routerLink]="['/heroes']" routerLinkActive="router-link-active-class">Heroes</a><br>
+<hr>
 <router-outlet></router-outlet>
