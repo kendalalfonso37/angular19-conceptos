@@ -10,14 +10,14 @@ export class SignalsComponent {
   contador = signal<number>(0);
 
   subtract() {
-    this.contador.update(valorActual => valorActual - 1); 
-  }
-  
-  add(){
-    this.contador.update(valorActual => valorActual + 1); 
+    this.contador.update(valorActual => valorActual - 1);
   }
 
-  reset(){
+  add() {
+    this.contador.update(valorActual => valorActual + 1);
+  }
+
+  reset() {
     this.contador.set(0);
   }
 }
