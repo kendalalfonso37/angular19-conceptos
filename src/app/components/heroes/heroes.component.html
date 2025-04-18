@@ -1,1 +1,56 @@
-<p>heroes works!</p>,
+<div>
+  <div>
+    <!-- Formulario -->
+    <fieldset>
+      <legend>Agregar Heroe</legend>
+      <label for="id">ID: </label><br>
+      <input type="number" name="id" [(ngModel)]="newHeroe.id" placeholder="ID" min="0" />
+      <br>
+      <label for="nombre">Nombre: </label><br>
+      <input type="text" name="nombre" [(ngModel)]="newHeroe.nombre" placeholder="Nombre" />
+      <br>
+      <label for="planetaOrigen">Planeta de Origen: </label><br>
+      <input type="text" name="planetaOrigen" [(ngModel)]="newHeroe.planetaOrigen" placeholder="Planeta de Origen" />
+      <br>
+      <label for="poder">Poder: </label><br>
+      <input type="number" name="poder" [(ngModel)]="newHeroe.poder" placeholder="Poder" min="0" />
+      <br><br>
+      <button type="submit" (click)="agregarHeroe()">Agregar</button>
+    </fieldset>
+  </div>
+  <div>
+    <!-- Listado de Heroes -->
+    <h2>Listado de Heroes</h2>
+    <p>Doble clic para modificar un heroe</p>
+    <table border="1px">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Nombre</th>
+          <th>Planeta de Origen</th>
+          <th>Poder</th>
+          <th>Clasificación</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (heroe of heroesList(); track $index) {
+        <tr (dblclick)="extractHeroe(heroe)">
+          <td>{{ heroe.id }}</td>
+          <td>{{heroe.nombre}}</td>
+          <td>{{heroe.planetaOrigen}}</td>
+          <td>{{heroe.poder}}</td>
+          <td>
+            @if (heroe.poder > 0 && heroe.poder < 500) {
+              <b style="background-color: brown;">Saiyajin Clase Baja</b>
+            } @else if (heroe.poder> 500 && heroe.poder < 9000) {
+              <b style="background-color: yellow;">Saiyajin Clase Media</b>
+            } @else if( heroe.poder > 9000) {
+              <b style="background-color: green;">Saiyajin Clase Alta</b>
+            }
+          </td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "nombre": "Goku",
+    "planetaOrigen": "Tierra",
+    "poder": 9002
+  },
+  {
+    "id": 2,
+    "nombre": "Krillin",
+    "planetaOrigen": "Tierra",
+    "poder": 4000
+  },
+  {
+    "id": 3,
+    "nombre": "Yamcha",
+    "planetaOrigen": "Tierra",
+    "poder": 490
+  }
+]
