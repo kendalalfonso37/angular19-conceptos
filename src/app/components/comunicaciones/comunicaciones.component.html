@@ -1,0 +1,13 @@
+<h1>Comunicacion entre componentes</h1>
+<div>
+  <div>
+    <!-- Formulario -->
+    <app-comunicaciones-form [usuario]="newUsuario()"
+      (usuarioUpdated)="agregarUsuario($event)"></app-comunicaciones-form>
+  </div>
+  <div>
+    <!-- Listado de Usuarios -->
+    <app-comunicaciones-list [users]="usuariosList()"
+      (userSelected)="handleSelectedUser($event)"></app-comunicaciones-list>
+  </div>
+</div>

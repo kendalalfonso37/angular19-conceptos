@@ -1,0 +1,16 @@
+<fieldset>
+  <legend>Agregar Usuario</legend>
+  <label for="id">id: </label><br>
+  <input type="number" [(ngModel)]="newUsuario.id" name="id" placeholder="ID" min="0" />
+  <br>
+  <label for="username">username: </label><br>
+  <input type="text" [(ngModel)]="newUsuario.username" name="username" placeholder="username" />
+  <br>
+  <label for="email">email: </label><br>
+  <input type="text" [(ngModel)]="newUsuario.email" name="email" placeholder="email" />
+  <br>
+  <label for="isActive">isActive: </label><br>
+  <input type="checkbox" [(ngModel)]="newUsuario.isActive" name="isActive" placeholder="isActive" checked />
+  <br><br>
+  <button type="submit" (click)="agregarUsuario()">Guardar</button>
+</fieldset>

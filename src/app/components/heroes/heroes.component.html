@@ -40,13 +40,12 @@
           <td>{{heroe.planetaOrigen}}</td>
           <td>{{heroe.poder}}</td>
           <td>
-            @if (heroe.poder > 0 && heroe.poder < 500) {
-              <b style="background-color: brown;">Saiyajin Clase Baja</b>
-            } @else if (heroe.poder> 500 && heroe.poder < 9000) {
-              <b style="background-color: yellow;">Saiyajin Clase Media</b>
-            } @else if( heroe.poder > 9000) {
-              <b style="background-color: green;">Saiyajin Clase Alta</b>
-            }
+            @if (heroe.poder > 0 && heroe.poder < 500) { <b style="background-color: brown;">Saiyajin Clase Baja</b>
+              } @else if (heroe.poder> 500 && heroe.poder < 9000) { <b style="background-color: yellow;">Saiyajin Clase
+                Media</b>
+                } @else if( heroe.poder > 9000) {
+                <b style="background-color: green;">Saiyajin Clase Alta</b>
+                }
           </td>
         </tr>
         }
