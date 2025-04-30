@@ -5,13 +5,14 @@ import { Observable } from 'rxjs';
 
 import { PokemonResponse } from './pokemon.model';
 import { PokemonDetail } from './pokemon-detail.model';
+import { environment } from '../../../environments/environment.development';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PokemonService {
   private http = inject(HttpClient);
-  private baseUrl = 'https://pokeapi.co/api/v2';
+  private baseUrl = environment.pokeApiUrl || 'https://pokeapi.co/api/v2';
 
   constructor() { }
 
